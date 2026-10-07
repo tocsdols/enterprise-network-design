@@ -1,0 +1,11 @@
+| Topology | IP Addressing | PC Connectivity |
+| :---: | :---: | :---: |
+| ![Topology](screenshots/01-topology.png) | ![IP Addressing](screenshots/02-ip-addressing.png) | ![PC Connectivity](screenshots/03-pc-connectivity.png) |
+
+| SSH R1 | SSH S1 | SSH S2 |
+| :---: | :---: | :---: |
+| ![SSH R1](screenshots/04-ssh-r1.png) | ![SSH S1](screenshots/05-ssh-s1.png) | ![SSH S2](screenshots/06-ssh-s2.png) |
+
+| Routing Table | MAC Address Table |
+| :---: | :---: |
+| ![Routing Table](screenshots/07-routing-table.png) | ![MAC Address Table](screenshots/08-mac-table.png) |
