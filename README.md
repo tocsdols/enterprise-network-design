@@ -152,12 +152,6 @@ Connectivity tests included:
 - IPv4
 - SSH
 
-## Project Files
-
-- `packet-tracer/` — place the final `.pkt` project file here
-- `configs/` — sanitized configuration examples
-- `verification/` — verification notes/output
-- `screenshots/` — topology and command screenshots
 
 ## Screenshots
 | Topology | IP Addressing | PC Connectivity |
