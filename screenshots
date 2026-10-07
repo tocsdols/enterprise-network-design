@@ -1,11 +1,11 @@
 | Topology | IP Addressing | PC Connectivity |
 | :---: | :---: | :---: |
-| ![Topology](screenshots/01-topology.png) | ![IP Addressing](screenshots/02-ip-addressing.png) | ![PC Connectivity](screenshots/03-pc-connectivity.png) |
+| <img width="743" alt="Topology" src="https://github.com/user-attachments/assets/d32abbf0-d8bf-4e0e-a941-8a803e85e330" /> | <img width="455" alt="IP Addressing" src="https://github.com/user-attachments/assets/66e571cd-897c-46e8-b69d-081f4268b4c0" /> | <img width="580" alt="PC Connectivity" src="https://github.com/user-attachments/assets/78fc9998-9799-43b9-97e5-9666195e0dea" /> |
 
 | SSH R1 | SSH S1 | SSH S2 |
 | :---: | :---: | :---: |
-| ![SSH R1](screenshots/04-ssh-r1.png) | ![SSH S1](screenshots/05-ssh-s1.png) | ![SSH S2](screenshots/06-ssh-s2.png) |
+| <img width="622" alt="SSH R1" src="https://github.com/user-attachments/assets/85ca28db-c158-49d1-b323-73a7a7870ee7" /> | <img width="260" alt="SSH S1" src="https://github.com/user-attachments/assets/4dbbbd89-ba20-495b-aa75-fabe5394ab54" /> | <img width="331" alt="SSH S2" src="https://github.com/user-attachments/assets/3dd69bbb-9071-431c-8fb1-1704f54eedb7" /> |
 
 | Routing Table | MAC Address Table |
 | :---: | :---: |
-| ![Routing Table](screenshots/07-routing-table.png) | ![MAC Address Table](screenshots/08-mac-table.png) |
+| <img width="513" alt="Routing Table" src="https://github.com/user-attachments/assets/0559bdbb-b99a-4f6e-8a68-86622653f2fd" /> | <img width="257" alt="MAC Address Table" src="https://github.com/user-attachments/assets/fabca017-4f4b-4450-af43-b8d630e067ae" /> |
