@@ -1,28 +1,41 @@
-# enterprise-network-design
+# Secure Small Enterprise Network — Cisco Packet Tracer
+
+                    R1
+                 /      \
+                /        \
+              S1          S2
+              |            |
+            PC-A          PC-B
 
 A small routed enterprise network designed and implemented from scratch using Cisco Packet Tracer.
 
-##  Project Overview
 
-This project demonstrates the design, configuration, security, and verification of a small IPv4 network consisting of:
+## Project Overview
 
-- 1 × Cisco 4321 Router
-- 2 × Cisco 2960 Switches
-- 2 × End Devices
+This project uses:
 
-The network was divided into two IPv4 /25 subnets and configured to allow communication between both LANs through the router.
+- 1 × Cisco 4321 Router (R1)
+- 2 × Cisco 2960 Switches (S1 and S2)
+- 2 × PCs (PC-A and PC-B)
+- IPv4 `/25` subnetting
+- Inter-network routing
+- Switch management using SVI
+- SSH remote management
+- RSA keys and local authentication
+- Console and VTY security
+- Cisco IOS verification commands
 
-## Network Topology
 
-PC-A
-  |
- S1
-  |
-R1
-  |
- S2
-  |
-PC-B
+## Topology
+
+```text
+             R1
+          /      \
+       S1          S2
+       |            |
+     PC-A          PC-B
+```
+
 
 R1 provides routing between the two networks.
 
@@ -39,29 +52,41 @@ R1 provides routing between the two networks.
 
 ## Subnetting
 
-The original network was:
+Starting network:
 
-192.168.100.0/24
+`192.168.100.0/24`
 
-One host bit was borrowed to create two /25 subnets.
+One host bit was borrowed:
 
-### Network 1
+`/24 → /25`
 
-192.168.100.0/25
+This produced two subnets:
 
-- Network: 192.168.100.0
-- First usable: 192.168.100.1
-- Last usable: 192.168.100.126
-- Broadcast: 192.168.100.127
+### LAN 1 — 192.168.100.0/25
 
-### Network 2
+- Network: `192.168.100.0`
+- First usable: `192.168.100.1`
+- Last usable: `192.168.100.126`
+- Broadcast: `192.168.100.127`
 
-192.168.100.128/25
+### LAN 2 — 192.168.100.128/25
 
-- Network: 192.168.100.128
-- First usable: 192.168.100.129
-- Last usable: 192.168.100.254
-- Broadcast: 192.168.100.255
+- Network: `192.168.100.128`
+- First usable: `192.168.100.129`
+- Last usable: `192.168.100.254`
+- Broadcast: `192.168.100.255`
+
+## Routing
+
+R1 has both networks as directly connected routes:
+
+```text
+C 192.168.100.0/25      directly connected, GigabitEthernet0/0/0
+C 192.168.100.128/25    directly connected, GigabitEthernet0/0/1
+```
+
+No static route was required because both LANs are directly connected to R1.
+
 
 ## Security Configuration
 
@@ -97,14 +122,15 @@ show running-config | section line vty
 ```
 
 
-## Connectivity Tests
-PC-A successfully reached:
-- R1: 192.168.100.1
-- PC-B: 192.168.100.254
-PC-B successfully reached:
-- R1: 192.168.100.129
-All tested connections achieved:
-0% packet loss
+Connectivity tests included:
+
+- PC-0 → R1: 0% packet loss
+- PC-1 → R1: 0% packet loss
+- PC-0 → PC-1: 0% packet loss
+- SSH from PC-0 → R1: successful
+- SSH from PC-0 → S1: successful
+- SSH from PC-1 → S2: successful
+
 
 ## Skills Demonstrated
 - IPv4 addressing
@@ -126,6 +152,12 @@ All tested connections achieved:
 - IPv4
 - SSH
 
+## Project Files
+
+- `packet-tracer/` — place the final `.pkt` project file here
+- `configs/` — sanitized configuration examples
+- `verification/` — verification notes/output
+- `screenshots/` — topology and command screenshots
 
 ## Screenshots
 | Topology | IP Addressing | PC Connectivity |
